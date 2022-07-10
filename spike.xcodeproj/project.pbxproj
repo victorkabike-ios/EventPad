@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF059BE228749EB400108DC7 /* NewEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF059BE128749EB400108DC7 /* NewEvent.swift */; };
 		FF0D45EF286F78BE003DC94D /* spikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D45EE286F78BE003DC94D /* spikeApp.swift */; };
 		FF0D45F1286F78BE003DC94D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D45F0286F78BE003DC94D /* ContentView.swift */; };
 		FF0D45F3286F78C1003DC94D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0D45F2286F78C1003DC94D /* Assets.xcassets */; };
 		FF0D45F6286F78C1003DC94D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0D45F5286F78C1003DC94D /* Preview Assets.xcassets */; };
 		FF0D45F8286F78C1003DC94D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D45F7286F78C1003DC94D /* Persistence.swift */; };
 		FF0D45FB286F78C1003DC94D /* spike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF0D45F9286F78C1003DC94D /* spike.xcdatamodeld */; };
+		FF0D460D2870DDF8003DC94D /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0D460C2870DDF8003DC94D /* EventsViewModel.swift */; };
+		FF5CDD612871CB5A0083A551 /* EventList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CDD602871CB5A0083A551 /* EventList.swift */; };
+		FF5CDD632871DD320083A551 /* EventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5CDD622871DD320083A551 /* EventDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF059BE128749EB400108DC7 /* NewEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEvent.swift; sourceTree = "<group>"; };
 		FF0D45EB286F78BE003DC94D /* spike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0D45EE286F78BE003DC94D /* spikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spikeApp.swift; sourceTree = "<group>"; };
 		FF0D45F0286F78BE003DC94D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +28,9 @@
 		FF0D45F5286F78C1003DC94D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FF0D45F7286F78C1003DC94D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FF0D45FA286F78C1003DC94D /* spike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spike.xcdatamodel; sourceTree = "<group>"; };
+		FF0D460C2870DDF8003DC94D /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		FF5CDD602871CB5A0083A551 /* EventList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventList.swift; sourceTree = "<group>"; };
+		FF5CDD622871DD320083A551 /* EventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				FF0D45EE286F78BE003DC94D /* spikeApp.swift */,
-				FF0D45F0286F78BE003DC94D /* ContentView.swift */,
+				FF0D46012870D15C003DC94D /* View */,
+				FF0D46032870D174003DC94D /* ViewModel */,
+				FF0D46022870D169003DC94D /* Model */,
 				FF0D45F2286F78C1003DC94D /* Assets.xcassets */,
 				FF0D45F7286F78C1003DC94D /* Persistence.swift */,
 				FF0D45F9286F78C1003DC94D /* spike.xcdatamodeld */,
@@ -71,6 +81,32 @@
 				FF0D45F5286F78C1003DC94D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FF0D46012870D15C003DC94D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D45F0286F78BE003DC94D /* ContentView.swift */,
+				FF5CDD602871CB5A0083A551 /* EventList.swift */,
+				FF059BE128749EB400108DC7 /* NewEvent.swift */,
+				FF5CDD622871DD320083A551 /* EventDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0D46022870D169003DC94D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0D46032870D174003DC94D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FF0D460C2870DDF8003DC94D /* EventsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5CDD632871DD320083A551 /* EventDetail.swift in Sources */,
+				FF5CDD612871CB5A0083A551 /* EventList.swift in Sources */,
 				FF0D45F8286F78C1003DC94D /* Persistence.swift in Sources */,
+				FF0D460D2870DDF8003DC94D /* EventsViewModel.swift in Sources */,
 				FF0D45F1286F78BE003DC94D /* ContentView.swift in Sources */,
+				FF059BE228749EB400108DC7 /* NewEvent.swift in Sources */,
 				FF0D45FB286F78C1003DC94D /* spike.xcdatamodeld in Sources */,
 				FF0D45EF286F78BE003DC94D /* spikeApp.swift in Sources */,
 			);

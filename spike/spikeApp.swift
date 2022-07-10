@@ -13,7 +13,8 @@ struct spikeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EventList()
+                .environmentObject(EventsViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
